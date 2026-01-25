@@ -1,0 +1,22 @@
+.alert {
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+/* Success */
+.alert-success {
+  background-color: #4caf50;
+}
+
+/* Warning */
+.alert-warning {
+  background-color: #ff9800;
+}
+
+/* Error */
+.alert-error {
+  background-color: #f44336;
+}
