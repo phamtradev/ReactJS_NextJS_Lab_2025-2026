@@ -1,0 +1,48 @@
+.counter-container {
+  max-width: 400px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: white;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.counter-container h1 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.counter-display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #333;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  min-height: 100px;
+}
+
+.counter-display.red {
+  color: red;
+  border-color: red;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  border: 1px solid #333;
+  background: white;
+  cursor: pointer;
+  min-width: 70px;
+}
+
+.btn:hover {
+  background: #f0f0f0;
+}
