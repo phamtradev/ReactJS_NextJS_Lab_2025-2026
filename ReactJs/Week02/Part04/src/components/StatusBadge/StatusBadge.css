@@ -1,0 +1,26 @@
+.status-badge {
+  padding: 1rem 2rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin: 1rem 0;
+}
+
+.status-badge.online {
+  background: #4caf50;
+  color: white;
+}
+
+.status-badge.offline {
+  background: #9e9e9e;
+  color: white;
+}
+
+.status-badge.busy {
+  background: #f44336;
+  color: white;
+}
+
+.status-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
