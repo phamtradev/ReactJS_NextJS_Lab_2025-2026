@@ -1,0 +1,10 @@
+.todo-list {
+  margin-top: 1rem;
+}
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+  font-style: italic;
+}
