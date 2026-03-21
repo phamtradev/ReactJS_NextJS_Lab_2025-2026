@@ -1,0 +1,22 @@
+[
+    { "id": 1, "name": "Tech Trends", "category": "Technology", "desc": "Latest updates and innovations in technology." },
+    { "id": 2, "name": "Healthy Living", "category": "Health", "desc": "Tips and advice for a healthier lifestyle." },
+    { "id": 3, "name": "Learning Hub", "category": "Education", "desc": "Resources and guides for education and learning." },
+    { "id": 4, "name": "Money Matters", "category": "Finance", "desc": "Insights on managing money and investments." },
+    { "id": 5, "name": "Wanderlust", "category": "Travel", "desc": "Travel guides and destination ideas." },
+    { "id": 6, "name": "Foodies", "category": "Food", "desc": "Delicious recipes and food reviews." },
+    { "id": 7, "name": "Sports Arena", "category": "Sports", "desc": "News and updates from the sports world." },
+    { "id": 8, "name": "Showbiz", "category": "Entertainment", "desc": "Entertainment news and celebrity stories." },
+    { "id": 9, "name": "Science Daily", "category": "Science", "desc": "Discoveries and research in science." },
+    { "id": 10, "name": "Style Guide", "category": "Fashion", "desc": "Latest trends in fashion and style." },
+    { "id": 11, "name": "Biz World", "category": "Business", "desc": "Business news and market insights." },
+    { "id": 12, "name": "Life Hacks", "category": "Lifestyle", "desc": "Tips to improve everyday living." },
+    { "id": 13, "name": "Green Earth", "category": "Environment", "desc": "Environmental issues and sustainability." },
+    { "id": 14, "name": "Creative Corner", "category": "Art", "desc": "Artistic works and creative inspiration." },
+    { "id": 15, "name": "Music Beats", "category": "Music", "desc": "Music trends and artist highlights." },
+    { "id": 16, "name": "Past Times", "category": "History", "desc": "Stories and events from history." },
+    { "id": 17, "name": "Political Pulse", "category": "Politics", "desc": "Updates on political events and analysis." },
+    { "id": 18, "name": "Game Zone", "category": "Gaming", "desc": "Gaming news and reviews." },
+    { "id": 19, "name": "Auto World", "category": "Automotive", "desc": "Car reviews and automotive news." },
+    { "id": 20, "name": "Property Guide", "category": "Real Estate", "desc": "Insights into real estate and housing." }
+  ]
