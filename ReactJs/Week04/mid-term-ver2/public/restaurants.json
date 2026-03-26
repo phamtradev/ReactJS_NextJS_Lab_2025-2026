@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Pizza Palace",
+    "image": "https://via.placeholder.com/300x200?text=Pizza+Palace",
+    "cuisine": "Italian",
+    "rating": 4.5,
+    "priceRange": "$$",
+    "status": "open"
+  },
+  {
+    "id": 2,
+    "name": "Sushi World",
+    "image": "https://via.placeholder.com/300x200?text=Sushi+World",
+    "cuisine": "Japanese",
+    "rating": 4.8,
+    "priceRange": "$$$",
+    "status": "open"
+  },
+  {
+    "id": 3,
+    "name": "Burger Town",
+    "image": "https://via.placeholder.com/300x200?text=Burger+Town",
+    "cuisine": "American",
+    "rating": 4.2,
+    "priceRange": "$",
+    "status": "closed"
+  },
+  {
+    "id": 4,
+    "name": "Curry House",
+    "image": "https://via.placeholder.com/300x200?text=Curry+House",
+    "cuisine": "Indian",
+    "rating": 4.6,
+    "priceRange": "$$",
+    "status": "open"
+  },
+  {
+    "id": 5,
+    "name": "Pho Corner",
+    "image": "https://via.placeholder.com/300x200?text=Pho+Corner",
+    "cuisine": "Vietnamese",
+    "rating": 4.7,
+    "priceRange": "$",
+    "status": "closed"
+  },
+  {
+    "id": 6,
+    "name": "BBQ Garden",
+    "image": "https://via.placeholder.com/300x200?text=BBQ+Garden",
+    "cuisine": "Korean",
+    "rating": 4.4,
+    "priceRange": "$$$",
+    "status": "open"
+  }
+]
