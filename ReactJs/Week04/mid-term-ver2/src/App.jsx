@@ -1,10 +1,17 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
+
 import "./App.css";
 
-function App() {
+const App = () => {
   const [data, setData] = useState([]);
-  const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
 
   const [searchTerm, setSearchTerm] = useState("");
   const searchInputRef = useRef(null);
@@ -14,35 +21,37 @@ function App() {
 
   const jsonData = "/restaurants.json";
 
+  //focus input
   useEffect(() => {
     if (searchInputRef.current) {
       searchInputRef.current.focus();
     }
-  }, []);
+  }, [loading]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         setLoading(true);
         setError("");
-
         const res = await fetch(jsonData);
-
         if (!res.ok) {
           throw new Error("Fetch failed");
         }
-
         const data = await res.json();
         setData(data);
       } catch (err) {
-        setError("Cannot load restaurants");
+        setError("Loading failed...");
       } finally {
         setLoading(false);
       }
     };
-
     fetchData();
   }, []);
+
+  //filter by name
+  // const searchData = data.filter((item) =>
+  //   item.name.toLowerCase().includes(searchTerm.toLowerCase()),
+  // );
 
   const filteredData = useMemo(() => {
     return data.filter((item) => {
@@ -55,12 +64,10 @@ function App() {
 
       const matchPrice =
         priceFilter === "all" || item.priceRange === priceFilter;
-
       return matchName && matchStatus && matchPrice;
     });
   }, [data, searchTerm, statusFilter, priceFilter]);
 
-  // Dùng useCallback để tránh tạo lại hàm mỗi lần component re-render
   const handleResetFilters = useCallback(() => {
     setSearchTerm("");
     setStatusFilter("all");
@@ -76,18 +83,17 @@ function App() {
   }
 
   if (error) {
-    return <h2>{error}</h2>;
+    return <h2>Loading Failed...</h2>;
   }
 
   return (
     <div className="app">
       <h1>Restaurant Explorer</h1>
-
       <div className="controls">
         <input
           type="text"
           ref={searchInputRef}
-          placeholder="Search by restaurant name..."
+          placeholder="Search by name..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
@@ -100,7 +106,6 @@ function App() {
           <option value="open">Open</option>
           <option value="closed">Closed</option>
         </select>
-
         <select
           value={priceFilter}
           onChange={(e) => setPriceFilter(e.target.value)}
@@ -111,13 +116,12 @@ function App() {
           <option value="$$$">$$$</option>
         </select>
 
-        <button onClick={handleResetFilters}>Reset Filters</button>
+        <button onClick={handleResetFilters}>Reset filter</button>
       </div>
-
       <div className="restaurant-grid">
         {filteredData.map((item) => (
           <div className="card" key={item.id}>
-            <img src={item.image} alt={item.name} />
+            <img src={item.image} />
             <h3>{item.name}</h3>
             <p>Cuisine: {item.cuisine}</p>
             <p>Rating: {item.rating}</p>
@@ -128,6 +132,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
