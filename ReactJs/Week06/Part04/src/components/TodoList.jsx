@@ -1,4 +1,4 @@
-import { useTodo } from "../context/TodoContext";
+import { useTodo } from "../recoil/todoState";
 import TodoItem from "./TodoItem";
 
 export default function TodoList() {

@@ -1,4 +1,4 @@
-import { useCart } from "../context/CartContext";
+import { useCart } from "../recoil/cartState";
 
 export default function Cart() {
   const { cart, increase, decrease, getTotal } = useCart();

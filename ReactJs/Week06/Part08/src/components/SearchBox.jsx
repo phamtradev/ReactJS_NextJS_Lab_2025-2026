@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useSearch } from "../context/SearchContext";
+import { useSearch } from "../recoil/searchState";
 import useDebounce from "../hooks/useDebounce";
 
 export default function SearchBox() {
@@ -10,7 +10,7 @@ export default function SearchBox() {
 
   useEffect(() => {
     searchAPI(debouncedText);
-  }, [debouncedText]);
+  }, [debouncedText, searchAPI]);
 
   return (
     <input

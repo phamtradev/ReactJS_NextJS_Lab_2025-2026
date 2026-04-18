@@ -1,4 +1,4 @@
-import { useTheme } from "../context/ThemeContext";
+import { useTheme } from "../recoil/themeState";
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();

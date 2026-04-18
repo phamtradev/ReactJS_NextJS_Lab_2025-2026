@@ -1,4 +1,4 @@
-import { useCounter } from "../context/CounterContext";
+import { useCounter } from "../recoil/counterState";
 
 
 export default function ComponentB() {

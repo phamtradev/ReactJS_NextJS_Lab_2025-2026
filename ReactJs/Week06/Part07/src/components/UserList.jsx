@@ -1,4 +1,4 @@
-import { useUsers } from "../context/UserContext";
+import { useUsers } from "../recoil/userState";
 
 export default function UserList() {
   const { data, loading, error, refetch } = useUsers();

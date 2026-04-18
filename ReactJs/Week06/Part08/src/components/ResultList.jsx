@@ -1,4 +1,4 @@
-import { useSearch } from "../context/SearchContext";
+import { useSearch } from "../recoil/searchState";
 
 export default function ResultList() {
   const { data, loading, error } = useSearch();

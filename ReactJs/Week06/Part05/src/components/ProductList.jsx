@@ -1,4 +1,4 @@
-import { useCart } from "../context/CartContext";
+import { useCart } from "../recoil/cartState";
 
 const products = [
   { id: 1, name: "Áo", price: 100 },

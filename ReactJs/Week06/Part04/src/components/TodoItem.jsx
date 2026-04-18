@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useTodo } from "../context/TodoContext";
+import { useTodo } from "../recoil/todoState";
 
 export default function TodoItem({ todo }) {
   const { deleteTodo, editTodo } = useTodo();
