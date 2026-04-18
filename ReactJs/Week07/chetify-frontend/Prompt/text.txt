@@ -1,0 +1,141 @@
+<Send picture>
+Here is a landing page design I want to build.
+
+You are a senior frontend engineer and frontend architect.
+ 
+Build a production-ready, scalable landing page using:
+- React (Vite)
+- Tailwind CSS 
+- Clean component architecture 
+
+Goal: Recreate a modern recipe landing page like a premium food editorial site with clean UI, strong hierarchy, reusable architecture, and polished responsiveness. 
+
+TECH REQUIREMENTS: 
+- Use React functional components 
+- Use Tailwind CSS only 
+- No inline styles 
+- No separate CSS files unless absolutely necessary 
+- Use a scalable folder/component structure 
+- Follow best practices for maintainability and reusability 
+- Use props and data-driven rendering 
+- Avoid duplicated JSX - Use semantic HTML 
+- Use lucide-react for icons 
+- Ensure accessibility basics: alt text, labels, button semantics 
+- Make it fully responsive 
+
+ARCHITECTURE: Structure the code like a senior engineer would: 
+- components/ 
+ - layout/ 
+  - Navbar.jsx 
+  - Footer.jsx 
+
+- sections/ 
+  - Hero.jsx 
+  - RecipeSection.jsx 
+  - EditorPick.jsx 
+
+- ui/ 
+ - Button.jsx 
+ - Card.jsx 
+ - Badge.jsx 
+ - Input.jsx 
+ - SectionHeader.jsx 
+
+- cards/ 
+ - RecipeCard.jsx 
+ - EditorCard.jsx 
+
+- data/ 
+ - recipes.js 
+
+- pages/ 
+ - LandingPage.jsx 
+
+- App.jsx should only render LandingPage 
+
+Use reusable components: 
+- Generic Button with variants 
+- Generic Card wrapper 
+- Reusable section header 
+- Reusable recipe section driven by props and arrays 
+
+UI STRUCTURE: 
+1. Navbar 
+  - Logo “Chetify” 
+  - Search input 
+  - Navigation links 
+  - Login and Subscribe buttons 
+
+2. Hero Section 
+  - Large full-width background image
+  - Featured recipe card overlay on the left 
+  - Badge: “Recipe of the day” 
+  - Title 
+  - Description 
+  - Author info 
+  - CTA button 
+ 
+ 3. Recipe Sections 
+  - Reusable section layout 
+  - Centered title and subtitle 
+  - 4 cards on desktop 
+  - Used for: 
+    - This Summer Recipes 
+    - Recipes With Videos 
+ 
+ 4. Editor’s Pick 
+  - More editorial card layout 
+  - Larger cards with image + text content 
+  - Author info and short description 
+ 
+ 5. Footer 
+  - Dark multi-column footer 
+  - About text 
+  - Newsletter input + button 
+  - Grouped links 
+  - Bottom branding row 
+ 
+ DESIGN SYSTEM: 
+ - Primary accent: rose-500 
+ - Background: neutral-100 
+ - Cards: white 
+ - Text: neutral-900 and neutral-500 
+ - Container: max-w-7xl mx-auto px-4 
+ - Section spacing: py-16 
+ - Radius: rounded-2xl 
+ - Shadow: shadow-sm with hover:shadow-md 
+ - Smooth transitions: transition-all duration-300 
+ 
+ RESPONSIVENESS: 
+  - Mobile-first 
+  - Recipe grids: 
+    - mobile: 1 column 
+    - tablet: 2 columns 
+    - desktop: 4 columns 
+  - Navbar adapts cleanly on smaller screens 
+  - Hero content remains readable and well-stacked on mobile 
+  - Footer stacks properly 
+ 
+ DATA-DRIVEN: 
+  - Store section data in arrays 
+  - Render cards with map() 
+  - Keep data separate from 
+ 
+ UI CODE QUALITY: 
+  - Clean naming 
+  - Small focused components 
+  - No repeated code 
+  - Clear separation of concerns 
+  - Senior-level readability and maintainability 
+  - Avoid over-engineering, but keep it scalable 
+ 
+ IMPORTANT: 
+  - Prioritize matching the image’s layout hierarchy, spacing rhythm, and visual balance 
+  - Use premium spacing and polished hover states 
+  - Keep the result close to the reference image without copying every tiny detail - Write the code like a senior frontend engineer building for production 
+ 
+ OUTPUT FORMAT: 
+  1. Show the folder structure first 
+  2. Then provide code for each file 
+  3. Ensure it runs in a fresh Vite + Tailwind setup 
+  4. No TODO comments 5. No explanations until after all code is provided
