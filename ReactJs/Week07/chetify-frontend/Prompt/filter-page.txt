@@ -1,0 +1,203 @@
+Here is an authenticated search results / empty state page design I want to build.
+
+Use the attached image as the visual reference for layout, spacing, proportions, hierarchy, and overall visual style. Match the design closely, but do not make it pixel-perfect. Keep the branding, colors, spacing rhythm, and premium editorial feel consistent with the landing page and login modal built earlier.
+
+You are a senior frontend engineer and frontend architect.
+
+Build a production-ready, scalable authenticated page using:
+- React (Vite)
+- Tailwind CSS
+- Clean component architecture
+
+GOAL:
+Create a polished logged-in search results page for a recipe website. This screen represents the state after a user has logged in successfully and searched for something, but no results were found. The page should feel modern, elegant, clean, premium, and fully responsive.
+
+TECH REQUIREMENTS:
+- Use React functional components
+- Use Tailwind CSS only
+- No inline styles
+- No separate CSS files unless absolutely necessary
+- Use semantic HTML
+- Ensure accessibility basics:
+  - proper button semantics
+  - labels or aria-labels for form controls
+  - alt text for images/icons if needed
+  - keyboard-friendly interactions
+- Use lucide-react for icons where appropriate
+- Keep code reusable, modular, and maintainable
+- Make the layout fully responsive
+
+ARCHITECTURE:
+Structure the code like a senior frontend engineer would:
+
+- components/
+  - layout/
+    - Navbar.jsx
+    - Footer.jsx
+  - search/
+    - SearchLayout.jsx
+    - FilterSidebar.jsx
+    - FilterSection.jsx
+    - RatingFilter.jsx
+    - TimeRangeFilter.jsx
+    - EmptyResults.jsx
+    - SearchTag.jsx
+  - ui/
+    - Button.jsx
+    - Input.jsx
+    - Checkbox.jsx
+    - Avatar.jsx
+    - Badge.jsx
+    - Container.jsx
+
+- data/
+  - filters.js
+  - searchSuggestions.js
+
+- pages/
+  - SearchEmptyStatePage.jsx
+
+- App.jsx should only render SearchEmptyStatePage
+
+UI STRUCTURE:
+
+1. AUTHENTICATED NAVBAR
+- Brand/logo on the left: “Chetify”
+- Search input visible in navbar with current query text
+- Navigation links:
+  - What to cook
+  - Recipes
+  - Ingredients
+  - Occasions
+  - About Us
+- A highlighted button on the right:
+  - “Your Recipe Box”
+- User avatar at the far right
+- Navbar should look clean, light, elegant, and consistent with previous screens
+
+2. MAIN CONTENT AREA
+Use a 2-column desktop layout:
+
+LEFT SIDEBAR:
+A filter panel card with rounded corners and subtle borders/shadows.
+
+Sections:
+- Header: “FILTERS” with icon
+- Type
+  - checkbox list in 2 columns
+  - example items:
+    - Pan-fried
+    - Stir-fried
+    - Grilled
+    - Roasted
+    - Sauteed
+    - Baked
+    - Steamed
+    - Stewed
+- Time
+  - range slider style section
+  - show selected values above slider
+- Rating
+  - checkbox list with star-based rating rows
+- Apply button at the bottom
+
+Behavior/style:
+- Each filter section should look clean and separated
+- Use subtle borders/dividers
+- Checkbox states should use the pink brand color
+- Rating stars should be visually clear
+- Range slider should look polished and premium
+
+RIGHT CONTENT:
+Empty results state centered within available area.
+
+Include:
+- Large heading:
+  - Sorry, no results were found for “cakescascsa”
+- Large illustration or placeholder graphic representing no results
+- Supporting text:
+  - We have all your Independence Day sweets covered.
+- Suggested keyword tags/chips:
+  - Sweet Cake
+  - Black Cake
+  - Pozole Verde
+  - Healthy food
+
+Style:
+- Strong visual hierarchy
+- Plenty of whitespace
+- Empty state should feel helpful, not broken
+- Tags should be pastel-colored rounded pills
+
+3. FOOTER
+- Dark footer consistent with previous pages
+- Left column:
+  - About Us text
+  - newsletter email input
+  - Send button
+- Middle / right columns:
+  - Learn More
+  - Shop
+  - Recipes
+- Bottom row:
+  - brand/logo
+  - copyright
+  - policy links
+
+DESIGN SYSTEM:
+- Primary accent: rose / pink
+- Background: neutral-100 or soft gray
+- Surface/card background: white
+- Text primary: neutral-900
+- Text secondary: neutral-500
+- Footer background: dark navy / charcoal
+- Border radius: rounded-2xl
+- Shadows: soft and subtle
+- Borders: light gray
+- Smooth transitions: transition-all duration-300
+- Use generous spacing and premium layout balance
+
+RESPONSIVENESS:
+- Desktop:
+  - 2-column layout with left filter sidebar and right content area
+- Tablet:
+  - filter sidebar can stack above content
+- Mobile:
+  - everything stacks vertically
+  - filter panel becomes full width
+  - navbar adapts cleanly
+  - footer stacks into vertical columns
+- Avoid overflow and cramped spacing on small screens
+
+INTERACTION:
+- Search input should look active/populated
+- Filter checkboxes should have proper checked/unchecked states
+- Apply button should have hover/focus states
+- Tags/chips should feel interactive
+- “Your Recipe Box” button should look like a signed-in user action
+- Avatar should be styled cleanly
+- No backend logic required, UI only
+
+CODE QUALITY:
+- Clean naming conventions
+- No repeated code
+- Small reusable components
+- Clear separation of concerns
+- Data-driven rendering for filter options and suggestion tags
+- Senior-level readability and maintainability
+- Avoid over-engineering while keeping it scalable
+
+IMPORTANT:
+- This page belongs to the same product as the landing page and login modal built earlier
+- Keep the visual language consistent across all screens
+- Prioritize matching the reference image’s layout hierarchy, spacing rhythm, proportions, and premium feel
+- Use the image as visual guidance for composition and styling
+- Write the code like a senior frontend engineer building for production
+
+OUTPUT FORMAT:
+1. Show folder structure first
+2. Then provide code for each file
+3. Ensure it runs in a fresh Vite + Tailwind setup
+4. Include any required install commands, including lucide-react if used
+5. No TODO comments
+6. No explanations until after all code is provided

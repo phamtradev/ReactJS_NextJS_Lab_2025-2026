@@ -1,4 +1,3 @@
-import { X } from 'lucide-react';
 import Modal from '../ui/Modal';
 import Input from '../ui/Input';
 import Button from '../ui/Button';
@@ -8,9 +7,10 @@ import SocialLoginButton from './SocialLoginButton';
 const promoImage =
   'https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1400&q=80';
 
-function LoginModal({ open, onClose }) {
+function LoginModal({ open, onClose, onLoginSuccess }) {
   const handleSubmit = (event) => {
     event.preventDefault();
+    onLoginSuccess?.();
   };
 
   return (
@@ -43,11 +43,11 @@ function LoginModal({ open, onClose }) {
 
             <Button
               variant="ghost"
-              className="h-11 w-11 rounded-full p-0"
+              className="h-11 w-11 rounded-full border border-neutral-300 p-0 text-2xl leading-none text-neutral-900 hover:bg-neutral-200"
               aria-label="Close login modal"
               onClick={onClose}
             >
-              <X className="h-6 w-6" />
+              X
             </Button>
           </div>
 

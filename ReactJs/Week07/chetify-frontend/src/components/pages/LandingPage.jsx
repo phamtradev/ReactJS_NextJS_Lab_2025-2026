@@ -11,7 +11,7 @@ import {
   videoRecipes,
 } from '../data/recipes';
 
-function LandingPage() {
+function LandingPage({ onLoginSuccess }) {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   return (
@@ -43,6 +43,7 @@ function LandingPage() {
       <LoginModal
         open={isLoginOpen}
         onClose={() => setIsLoginOpen(false)}
+        onLoginSuccess={onLoginSuccess}
       />
     </div>
   );
