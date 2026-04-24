@@ -2,7 +2,7 @@
 
 @layer base {
   * {
-    @apply border-neutral-200;
+    border-color: #e5e5e5;
   }
 
   html {
@@ -10,14 +10,19 @@
   }
 
   body {
-    @apply bg-neutral-100 text-neutral-900 antialiased;
+    background-color: #f5f5f5;
+    color: #171717;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   a {
-    @apply transition-colors duration-300;
+    transition-property: color, background-color, border-color, text-decoration-color, fill,
+      stroke;
+    transition-duration: 300ms;
   }
 
   button {
-    @apply cursor-pointer;
+    cursor: pointer;
   }
 }

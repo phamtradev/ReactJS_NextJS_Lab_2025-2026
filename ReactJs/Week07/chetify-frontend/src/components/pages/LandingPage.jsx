@@ -1,19 +1,22 @@
-
+import { useState } from 'react';
+import Footer from '../layouts/Footer';
+import Navbar from '../layouts/Navbar';
+import EditorPick from '../sections/EditorPick';
+import Hero from '../sections/Hero';
+import RecipeSection from '../sections/RecipeSection';
+import LoginModal from '../auth/LoginModal';
 import {
   editorPicks,
   summerRecipes,
   videoRecipes,
 } from '../data/recipes';
-import Footer from '../layouts/Footer';
-import { Navbar } from '../layouts/Navbar';
-import EditorPick from '../sections/EditorPick';
-import Hero from '../sections/Hero';
-import RecipeSection from '../sections/RecipeSection';
 
 function LandingPage() {
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-neutral-100">
-      <Navbar />
+      <Navbar onOpenLogin={() => setIsLoginOpen(true)} />
 
       <main>
         <Hero />
@@ -36,8 +39,14 @@ function LandingPage() {
       </main>
 
       <Footer />
+
+      <LoginModal
+        open={isLoginOpen}
+        onClose={() => setIsLoginOpen(false)}
+      />
     </div>
   );
 }
 
+export { LandingPage };
 export default LandingPage;

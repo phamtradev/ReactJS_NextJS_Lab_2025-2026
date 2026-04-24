@@ -1,10 +1,11 @@
 import { Menu, Search, X } from 'lucide-react';
 import { useState } from 'react';
-import { navLinks } from '../data/recipes';
-import Button from '../ui/Button';
 import Input from '../ui/Input';
+import Button from '../ui/Button';
+import { navLinks } from '../data/recipes';
 
-export function Navbar() {
+
+function Navbar({ onOpenLogin }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -39,7 +40,7 @@ export function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Button variant="secondary" size="sm">
+            <Button variant="secondary" size="sm" onClick={onOpenLogin}>
               Login
             </Button>
             <Button size="sm">Subscribe</Button>
@@ -81,7 +82,14 @@ export function Navbar() {
             </nav>
 
             <div className="mt-4 flex gap-3">
-              <Button variant="secondary" className="flex-1">
+              <Button
+                variant="secondary"
+                className="flex-1"
+                onClick={() => {
+                  setIsOpen(false);
+                  onOpenLogin?.();
+                }}
+              >
                 Login
               </Button>
               <Button className="flex-1">Subscribe</Button>
